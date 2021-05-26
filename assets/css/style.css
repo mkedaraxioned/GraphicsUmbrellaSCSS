@@ -1,0 +1,559 @@
+@charset "UTF-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+input[type=radio] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1903px;
+  width: 57.22%;
+  margin: 0 auto;
+}
+
+/*=================================
+  Header styling starts here
+=================================*/
+header {
+  background-image: url("../img/bg.jpg");
+}
+header .wrapper {
+  padding: 27px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 19px;
+  /* hamburger css starts here*/
+  /* hamburger css ends here*/
+}
+header .wrapper .brand-name {
+  flex-basis: 28.74%;
+}
+header .wrapper .brand-name a {
+  width: 100%;
+}
+header .wrapper a {
+  position: relative;
+  color: #000;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in;
+}
+header .wrapper nav {
+  flex-basis: 47.75%;
+}
+header .wrapper .navbar {
+  display: flex;
+}
+header .wrapper .navbar li {
+  margin-right: 10.38%;
+}
+header .wrapper .navbar a:hover {
+  background-color: #40b781;
+  color: #000;
+}
+header .wrapper .brand-name a {
+  color: #fff;
+  text-indent: -9999px;
+}
+header .wrapper .brand-name img {
+  float: right;
+}
+header .wrapper .menu-bar {
+  display: none;
+}
+header .wrapper .menu-bar {
+  display: none;
+  font-weight: bold;
+}
+@media screen and (max-width: 1023px) {
+  header .wrapper .menu-bar {
+    display: block;
+    float: right;
+  }
+}
+header .wrapper .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+header .wrapper .toggle-item {
+  padding: 10px 2%;
+}
+header .wrapper .inactive {
+  display: none;
+}
+header .wrapper .toggle:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .wrapper .hide {
+  visibility: hidden;
+}
+header .wrapper .show {
+  visibility: visible;
+}
+@media screen and (max-width: 1023px) {
+  header .wrapper .hide-menu-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* Seperate Header css starts here */
+  .header-effect {
+    width: 100vw;
+    height: 100vh;
+    background-color: #8db542;
+  }
+
+  .hamburger-effect {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .navbar {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .menu-bar {
+    display: block;
+    float: right;
+  }
+
+  .hide-menu-item {
+    display: none;
+  }
+
+  .hamburger-menu {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .hamburger-menu li {
+    width: 50%;
+    padding: 10px 10%;
+    margin-bottom: 5px;
+    background-color: rgba(54, 54, 54, 0.8);
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .show-menu-item {
+    display: block;
+  }
+
+  .bars-ico {
+    float: right;
+  }
+
+  nav {
+    flex-basis: 75%;
+  }
+
+  /* Header css ends here */
+}
+@media screen and (max-width: 767px) {
+  .hamburger-menu li {
+    width: 95%;
+  }
+
+  header .wrapper nav {
+    margin-right: 10%;
+    flex-basis: 50%;
+  }
+
+  .hamburger-menu {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 320px) {
+  nav {
+    margin-left: 0;
+  }
+}
+/*=================================
+  Header styling ends here
+=================================*/
+/*=================================
+  main styling starts here
+=================================*/
+/*=================================
+  hero section styling starts here
+=================================*/
+.hero-section .wrapper {
+  width: 100%;
+}
+.hero-section__list li {
+  position: relative;
+}
+.hero-section__list li:nth-child(n+2) {
+  display: none;
+}
+.hero-section__title {
+  width: 25.11%;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  color: #fff;
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.5;
+}
+
+/*=================================
+  hero section styling ends here
+=================================*/
+/*=================================
+  welcome section styling starts here
+=================================*/
+.welcome-section {
+  background-image: url("../img/bg.jpg");
+}
+.welcome-section .wrapper {
+  padding-top: 37px;
+}
+.welcome-section__title {
+  position: relative;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.welcome-section__title span {
+  color: #a0c63f;
+}
+.welcome-section__title::after {
+  content: " ";
+  width: 100%;
+  border-top: 2px #eaeaea dashed;
+  display: block;
+  position: absolute;
+  bottom: -38px;
+}
+.welcome-section__list {
+  margin-top: 76px;
+  display: flex;
+  justify-content: space-between;
+}
+.welcome-section__list li > span {
+  padding: 34px 29%;
+  border: 25px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  background: #8db542;
+}
+.welcome-section .recycle-ico::before {
+  content: "";
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 87px;
+}
+.welcome-section .call-ico::before {
+  content: "";
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 87px;
+}
+.welcome-section .settings-ico::before {
+  content: "";
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 87px;
+}
+.welcome-section .mobile-ico::before {
+  content: "";
+  color: #fff;
+  font-family: "FontAwesome";
+  font-size: 87px;
+}
+
+/*=================================
+  welcome section styling ends here
+=================================*/
+/*=================================
+  portfolio section styling starts here
+=================================*/
+.portfolio-section {
+  background-image: url("../img/bg.jpg");
+}
+.portfolio-section .wrapper {
+  padding-top: 60px;
+}
+.portfolio-section h3 {
+  margin-left: 5%;
+  position: relative;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.portfolio-section h3 span {
+  color: #8db542;
+}
+.portfolio-section h3::before {
+  content: " ";
+  width: 45px;
+  border-top: 2px #eaeaea dashed;
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  left: -5%;
+}
+.portfolio-section h3::after {
+  content: " ";
+  width: 60%;
+  border-top: 2px #eaeaea dashed;
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+}
+.portfolio-section__list {
+  margin-top: 38px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.portfolio-section__list li {
+  flex-basis: 48.39%;
+  display: flex;
+}
+.portfolio-section__list li figure {
+  flex-basis: 48.76%;
+}
+.portfolio-section__list li div {
+  flex-basis: 51.61%;
+}
+.portfolio-section__list li:nth-child(n+3) {
+  margin-top: 30px;
+}
+.portfolio-section__list h4 {
+  margin-top: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.portfolio-section__list a {
+  margin-top: 5px;
+  padding: 2px 5%;
+  background: #8db542;
+  color: #fff;
+  font-size: 14px;
+}
+.portfolio-section__list p {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.portfolio-section__div {
+  padding: 0 4.74%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+/*=================================
+  portfolio section styling ends here
+=================================*/
+/*=================================
+  advertisers section styling starts here
+=================================*/
+.advertisers-section {
+  background-image: url("../img/bg.jpg");
+}
+.advertisers-section .wrapper {
+  padding: 64px 0 122px;
+}
+.advertisers-section h2 {
+  margin-left: 5%;
+  position: relative;
+  font-size: 29px;
+  text-transform: uppercase;
+}
+.advertisers-section h2 span {
+  color: #8db542;
+}
+.advertisers-section h2::before {
+  content: " ";
+  width: 45px;
+  border-top: 2px #eaeaea dashed;
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  left: -5%;
+}
+.advertisers-section h2::after {
+  content: " ";
+  width: 60%;
+  border-top: 2px #eaeaea dashed;
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+}
+.advertisers-section__list {
+  margin-top: 46px;
+  display: flex;
+}
+
+/*=================================
+  advertisers section styling ends here
+=================================*/
+/*=================================
+  main styling ends here
+=================================*/
+/*=================================
+  footer styling starts here
+=================================*/
+.footer .wrapper {
+  display: flex;
+}
+.footer__left-div {
+  flex-basis: 21.57%;
+}
+.footer__archieves-list {
+  flex-basis: 20.66%;
+}
+.footer__contactus-list {
+  flex-basis: 20.66%;
+}
+.footer__right-div {
+  flex-basis: 22.4%;
+}
+.footer .span-error {
+  display: none;
+}
+.footer h4 {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+/*=================================
+  footer styling ends here
+=================================*/
+
+/*# sourceMappingURL=style.css.map */
