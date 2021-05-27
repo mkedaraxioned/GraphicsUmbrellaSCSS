@@ -10,7 +10,6 @@
 
   &__list li { 
     position: relative; 
-    &:nth-child(n+2) { display: none; }
   }
 
   &__title {
@@ -60,7 +59,7 @@
     margin-top: 76px;
     display: flex;
     justify-content: space-between;  
-     li { flex-basis: 20%; } 
+    //  li { flex-basis: 20%; } 
       & li > span { 
         padding: 34px 29%;
       border: 25px solid $color_white;

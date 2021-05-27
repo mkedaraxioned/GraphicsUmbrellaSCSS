@@ -313,9 +313,6 @@ header .wrapper .show {
 .hero-section__list li {
   position: relative;
 }
-.hero-section__list li:nth-child(n+2) {
-  display: none;
-}
 .hero-section__title {
   width: 25.11%;
   position: absolute;
@@ -361,9 +358,6 @@ header .wrapper .show {
   margin-top: 76px;
   display: flex;
   justify-content: space-between;
-}
-.welcome-section__list li {
-  flex-basis: 20%;
 }
 .welcome-section__list li > span {
   padding: 34px 29%;
@@ -570,6 +564,32 @@ header .wrapper .show {
 /*=================================
   main styling ends here
 =================================*/
+/* form validation starts here */
+.hide-img {
+  display: none;
+}
+
+.show-img {
+  display: block;
+}
+
+.hide-element {
+  display: none;
+}
+
+.show-element {
+  display: block;
+}
+
+.outline-red {
+  outline: 2px solid #f00;
+}
+
+.span-error {
+  color: #c33333;
+}
+
+/* form validation ends here */
 /*=================================
   footer styling starts here
 =================================*/
