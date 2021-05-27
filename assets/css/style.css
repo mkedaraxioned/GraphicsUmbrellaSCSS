@@ -581,6 +581,10 @@ header .wrapper .show {
   display: block;
 }
 
+.span-error.show-element {
+  display: block;
+}
+
 .outline-red {
   outline: 2px solid #f00;
 }
