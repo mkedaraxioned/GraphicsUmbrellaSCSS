@@ -42,7 +42,9 @@
    &__middle-right { flex-basis: 20.66%; }
 
    &__socail-list { 
-     li {
+    @include flex(null,space-between,null);
+
+    li {
        a::before { 
          font-family: "FontAwesome";
          font-size: 28px;
@@ -101,7 +103,11 @@
         &:nth-child(4) a::before { content: "\f10b  "; }
       }
 
-      a { color: $color_black; }  
+      a { 
+        color: $color_black; 
+        display: flex;
+        align-items: center;
+      }  
     }
   
    &__right-div { flex-basis: 21.4%; } 
@@ -139,7 +145,11 @@
     &__inner {  
       width: 57.22%;
       margin: 0 auto;
-      @include flex(null ,space-between, null);    
+      @include flex(null ,space-between, null); 
+      @include media-max(767px) { 
+        flex-direction: column; 
+      span { margin-top: 25px; }
+      }   
     }
 
     a { 
@@ -151,6 +161,7 @@
    }
    &__bottom-list {
     //  margin-left: 5%;
+    display: flex;
      li { margin-right: 12px; }
    }
 }
