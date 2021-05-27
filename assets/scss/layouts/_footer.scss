@@ -15,6 +15,13 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @include media-max(1023px) {
+      flex-wrap: wrap;
+      & > div { 
+        margin-top: 50px;
+        flex-basis: 100%;
+      }
+    }
 
     h4 { margin-bottom: 20px; }
 
@@ -116,7 +123,7 @@
 
    .submit-btn {
      padding: 15px 2%;
-     margin-top: 20px;
+     margin: 20px 0;
      border: none;
      background-color: $color_green;
      color: $color_white;
@@ -126,20 +133,24 @@
 
    &_bottom-div {
      padding: 5px 0;
-    display: flex;
-    justify-content: space-around;
     background-color: $color_black;
     color: $color_white;
     
+    &__inner {  
+      width: 57.22%;
+      margin: 0 auto;
+      @include flex(null ,space-between, null);    
+    }
+
     a { 
       color: $color_white; 
       text-transform: uppercase;
     }
 
-    span { margin-right: 5%; }
+    // span { margin-right: 5%; }
    }
    &__bottom-list {
-     margin-left: 5%;
+    //  margin-left: 5%;
      li { margin-right: 12px; }
    }
 }

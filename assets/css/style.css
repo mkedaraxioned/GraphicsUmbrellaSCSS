@@ -499,7 +499,7 @@ header .wrapper .show {
   background-color: #fff;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
 }
-.portfolio-section .porfolio-section__fig > img {
+.portfolio-section__fig > img {
   height: 100%;
 }
 
@@ -585,6 +585,15 @@ header .wrapper .show {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  .footer__top-div {
+    flex-wrap: wrap;
+  }
+  .footer__top-div > div {
+    margin-top: 50px;
+    flex-basis: 100%;
+  }
 }
 .footer__top-div h4 {
   margin-bottom: 20px;
@@ -692,7 +701,7 @@ header .wrapper .show {
 }
 .footer .submit-btn {
   padding: 15px 2%;
-  margin-top: 20px;
+  margin: 20px 0;
   border: none;
   background-color: #8db542;
   color: #fff;
@@ -701,20 +710,18 @@ header .wrapper .show {
 }
 .footer_bottom-div {
   padding: 5px 0;
-  display: flex;
-  justify-content: space-around;
   background-color: #000;
   color: #fff;
+}
+.footer_bottom-div__inner {
+  width: 57.22%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .footer_bottom-div a {
   color: #fff;
   text-transform: uppercase;
-}
-.footer_bottom-div span {
-  margin-right: 5%;
-}
-.footer__bottom-list {
-  margin-left: 5%;
 }
 .footer__bottom-list li {
   margin-right: 12px;
